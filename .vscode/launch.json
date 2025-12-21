@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/GeAr/OneDrive - rfv4/Desktop/c++Assing",
-      "program": "c:/Users/GeAr/OneDrive - rfv4/Desktop/c++Assing/build/Debug/outDebug",
+      "cwd": "c:/Users/GeAr/Downloads/C-Plus-Plus-Robert-Lafore-master/C-Plus-Plus-Robert-Lafore-master/Progs/Ch05",
+      "program": "c:/Users/GeAr/Downloads/C-Plus-Plus-Robert-Lafore-master/C-Plus-Plus-Robert-Lafore-master/Progs/Ch05/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
