@@ -8,7 +8,7 @@ using namespace std;
 
 void nestIf(int arr[]){
 
-    cout<<"I am comparing using nested if-else : "<<endl;
+    cout<<"\nI am comparing using nested if-else : "<<endl;
       if (arr[0]>arr[1])
   {
     if (arr[0>arr[2]])
@@ -51,7 +51,7 @@ void nestIf(int arr[]){
   }
   
     
-    cout <<"Largest among above four nums: "<<largest<<endl;
+    cout <<"\nLargest among above four nums: "<<largest<<endl;
 //45 21 12 12
 
     if (arr[0]<arr[1])
@@ -99,16 +99,16 @@ void nestIf(int arr[]){
 
     cout<<"Smallest among the above four nums: "<<smallest<<endl;
 }
-void controlIf(int arr[]){
-    cout<<"I am comparing using nested ternary conditional operator: "<<endl;
+void ternIf(int arr[]){
+    cout<<"\nI am comparing using nested ternary conditional operator: "<<endl;
 
     largest = (arr[0] > arr[1] ? (arr[0] > arr[2]? (arr[0] > arr[3]?arr[0]:arr[3]):(arr[2]>arr[3]?arr[2]:arr[3]))
                                : (arr[1] > arr[2]?(arr[1]>arr[3]?arr[1]:arr[3]):(arr[2]>arr[3]?arr[2]:arr[3]))); 
-    cout <<"Largest among above four nums: "<<largest<<endl;
+    cout <<"\nLargest among above four nums: "<<largest<<endl;
 
     smallest = (arr[0] > arr[1] ? (arr[0] < arr[2]? (arr[0] < arr[3]?arr[0]:arr[3]):(arr[2]<arr[3]?arr[2]:arr[3]))
                                 :(arr[1]<arr[2]?(arr[1]<arr[3]?arr[1]:arr[3]):(arr[2]<arr[3]?arr[2]:arr[3])));
-    cout<<"Smallest among the above four nums: "<<smallest<<endl;                            
+    cout<<"\nSmallest among the above four nums: "<<smallest<<endl;                            
 }                               
 int main(){
     int arr[4];
@@ -117,14 +117,36 @@ int main(){
 
     int size = sizeof(arr)/sizeof(arr[0]);
 
-    cout<<"Your entered inputs are: "<<endl;
+    cout<<"\nYour entered inputs are: "<<endl;
     for (int i = 0; i <= size - 1; i++)
     {
         cout<<"Num "<<i+1<<" : "<<arr[i]<<endl;
     }
+    int choice;
 
-    nestIf(arr);
-    controlIf(arr);
+    while(1){
+        cout<<"Enter your choice: \nFor Nested if else Function: PRESS 1\nFor Nested Conditional Operator: PRESS 2\n To exit: PRESS 3"<<endl;
+        cin>>choice;
+
+        switch (choice)
+        {
+        case 1:
+            cout<<"\n\n";
+            nestIf(arr);
+            break;
+        case 2:
+            cout<<"\n\n";
+            ternIf(arr);
+            break;
+        case 3:
+            exit(1);
+            break;    
+        default:
+            cout<<"\nInvalid choice enter again"<<endl;
+            break;
+        }
+    }
+    
 
 //in real world problems we most of the times try to avoid the if else ladder having depth more than even 3
 //       int largest = arr[0];
