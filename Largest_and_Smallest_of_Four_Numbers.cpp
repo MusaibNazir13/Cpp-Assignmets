@@ -7,6 +7,8 @@ using namespace std;
     int smallest;
 
 void nestIf(int arr[]){
+
+    cout<<"I am comparing using nested if-else : "<<endl;
       if (arr[0]>arr[1])
   {
     if (arr[0>arr[2]])
@@ -97,7 +99,17 @@ void nestIf(int arr[]){
 
     cout<<"Smallest among the above four nums: "<<smallest<<endl;
 }
+void controlIf(int arr[]){
+    cout<<"I am comparing using nested ternary conditional operator: "<<endl;
 
+    largest = (arr[0] > arr[1] ? (arr[0] > arr[2]? (arr[0] > arr[3]?arr[0]:arr[3]):(arr[2]>arr[3]?arr[2]:arr[3]))
+                               : (arr[1] > arr[2]?(arr[1]>arr[3]?arr[1]:arr[3]):(arr[2]>arr[3]?arr[2]:arr[3]))); 
+    cout <<"Largest among above four nums: "<<largest<<endl;
+
+    smallest = (arr[0] > arr[1] ? (arr[0] < arr[2]? (arr[0] < arr[3]?arr[0]:arr[3]):(arr[2]<arr[3]?arr[2]:arr[3]))
+                                :(arr[1]<arr[2]?(arr[1]<arr[3]?arr[1]:arr[3]):(arr[2]<arr[3]?arr[2]:arr[3])));
+    cout<<"Smallest among the above four nums: "<<smallest<<endl;                            
+}                               
 int main(){
     int arr[4];
     cout<<"Enter 4 numbers: ";  
@@ -112,6 +124,16 @@ int main(){
     }
 
     nestIf(arr);
+    controlIf(arr);
+
+//in real world problems we most of the times try to avoid the if else ladder having depth more than even 3
+//       int largest = arr[0];
+//       int smallest = arr[0];
+
+// for (int i = 1; i < size; i++) {
+//     if (arr[i] > largest) largest = arr[i];
+//     if (arr[i] < smallest) smallest = arr[i];
+// }
 
     
 }
