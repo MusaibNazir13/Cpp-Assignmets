@@ -85,8 +85,7 @@ void nestIf(int arr[]){
             }
             
         }else{
-            if (arr[2]<arr[3])
-            {
+            if (arr[2]<arr[3]){
                 smallest=arr[2];
             }else{
                 smallest=arr[3];
